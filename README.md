@@ -1,5 +1,7 @@
 # Numix Circle for rEFInd
 
+[![Screenshot of rEFInd](screenshot.png)](screenshot.png)
+
 ## What is it?
 
 Numix Circle for rEFInd is a theme for rEFInd using the Numix Circle icons and palette.
