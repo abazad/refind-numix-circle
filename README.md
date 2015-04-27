@@ -4,6 +4,8 @@
 
 Numix Circle for rEFInd is a theme for rEFInd using the Numix Circle icons and palette.
 
+As Numix does not specify a `monospace` font, `Source Code Pro` has been used. This can be replaced by either editing the `Makefile` or overwriting the font file.
+
 ## How do I use it?
 
 Ensure that you have installed rEFInd, `sed`, `git`, `make` and `inkscape`
