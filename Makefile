@@ -2,8 +2,17 @@
 ICONS=$(patsubst %.svg,%.png,$(wildcard icons/*.svg))
 SELECTION=selection_big.png selection_small.png
 BACKGROUND=background.png
+FONTS=fonts/font.png
 
-all: $(ICONS) $(SELECTION) $(BACKGROUND)
+.PHONY: all clean
+
+all: $(ICONS) $(SELECTION) $(BACKGROUND) $(FONTS)
+
+clean:
+	rm -f $(ICONS)
+	rm -f $(SELECTION)
+#	rm -f $(BACKGROUND)
+	rm -f $(FONTS)
 
 selection_big.png: selection.svg
 	./convert "$@" "$^" 144
@@ -28,3 +37,6 @@ func_%.png: func_%.svg
 
 vol_%.png: vol_%.svg
 	./convert "$@" "$^" 32
+
+fonts/font.png: fonts/SourceCodePro-Bold.otf
+	fonts/mkfont.sh "$^" 14 -3 "$@"
