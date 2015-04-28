@@ -1,4 +1,3 @@
-.PHONY: all
 ICONS=$(patsubst %.svg,%.png,$(wildcard icons/*.svg))
 SELECTION=selection_big.png selection_small.png
 BACKGROUND=background.png
